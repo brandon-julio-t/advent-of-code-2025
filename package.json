@@ -1,0 +1,20 @@
+{
+  "name": "advent-of-code-2025",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "day1": "bun test --watch --concurrent src/day-1-secret-entrace.spec.ts",
+    "day2": "bun test --watch --concurrent src/day-2-gift-shop.spec.ts",
+    "day3": "bun test --watch --concurrent src/day-3-lobby.spec.ts",
+    "day4": "bun test --watch --concurrent src/day-4-printing-department.spec.ts",
+    "day5": "bun test --watch --concurrent src/day-5-cafeteria.spec.ts",
+    "day6": "bun test --watch --concurrent src/day-6-trash-compactor.spec.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
