@@ -15,12 +15,12 @@ describe("part 1", () => {
         }
 
         if (cell === "^" && matrix[row - 1]![col] === "|") {
-          if (matrix[row][col - 1] === ".") {
-            matrix[row][col - 1] = "|";
+          if (matrix[row]![col - 1] === ".") {
+            matrix[row]![col - 1] = "|";
           }
 
-          if (matrix[row][col + 1] === ".") {
-            matrix[row][col + 1] = "|";
+          if (matrix[row]![col + 1] === ".") {
+            matrix[row]![col + 1] = "|";
           }
 
           answer++;
@@ -225,7 +225,7 @@ describe("part 2", () => {
     col: number,
     height: number,
     width: number
-  ) {
+  ): bigint {
     // console.log({ row, col, height, width });
     if (row >= height) {
       // for (const row of matrix) {
@@ -239,14 +239,14 @@ describe("part 2", () => {
       // for (const row of cache) {
       //   console.log(row.join("|"));
       // }
-      return cache.get(cKey);
+      return cache.get(cKey)!;
     }
 
     const cell = matrix[row]?.[col];
     // console.log({ cell });
 
     if (cell === "." || cell === "|") {
-      matrix[row][col] = "|";
+      matrix[row]![col] = "|";
       return solveRecursive(cache, matrix, row + 1, col, height, width);
     }
 
